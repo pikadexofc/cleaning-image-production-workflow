@@ -1,0 +1,6 @@
+interface:
+  display_name: "Cleaning Image Production"
+  short_description: "Source-faithful cleaning images and safe resumable QA"
+  default_prompt: "Use $cleaning-image-production to resume my source-HTML cleaning image queue, preserving owner assignments and equipment references."
+policy:
+  allow_implicit_invocation: true

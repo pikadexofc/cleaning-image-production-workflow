@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+.env*
+.vercel/
+LOCAL_PROJECT_CONFIG.json
+state.json
+events.jsonl
+.workflow.lock
+pages/
+outputs/
+*.png
+*.jpg
+*.jpeg
+*.webp
