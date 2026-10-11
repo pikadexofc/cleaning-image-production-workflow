@@ -1,6 +1,4 @@
 interface:
-  display_name: "Cleaning Image Production"
-  short_description: "Source-faithful cleaning images and safe resumable QA"
-  default_prompt: "Use $cleaning-image-production to resume my source-HTML cleaning image queue, preserving owner assignments and equipment references."
-policy:
-  allow_implicit_invocation: true
+  display_name: Cleaning Image Production Recovery
+  short_description: Evidence-backed image rules and resumable checkpoints
+  default_prompt: Use $cleaning-image-production-recovery to resume the audited cleaning image queue.

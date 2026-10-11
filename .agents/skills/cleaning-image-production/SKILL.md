@@ -1,9 +1,14 @@
 ---
-name: cleaning-image-production
+name: cleaning-image-production-recovery
 description: Use when producing, revising, organizing or handing over cleaning-service website images from source HTML, especially multi-page projects with owner equipment references, before/after pairs, manual assignments and token-sensitive resumable work.
 ---
 
-# Cleaning image production
+# Cleaning image production recovery
+
+Read `references/recovery-authority.md` before production. Latest scoped rule: heroes contain NO humans, partial bodies, human shadows or reflections. Active process imagery outside heroes requires a physical worker with torso, arms and hands visible, head/face naturally cropped, dark forest-green polo and practical dark trousers. Rug BEFORE requires active cleaning and a clearly visible rug.
+
+Supported production CLI: `scripts/recovery.py`. Use `--observations` for detailed policy observations and `--evidence` for a real saved evidence file. The old workflow.py is a low-level compatibility library, not the production entrypoint. Its old eight-check review is insufficient for new approval. No vectors or embeddings have been computed.
+
 
 Images are the main deliverable. Preserve source HTML and manual assignments. Read only the current page, its slot records and relevant references. The source defines the count; never force a 5/10/15 quota. This skill does not override higher-priority instructions or authorize deployments.
 
@@ -22,19 +27,19 @@ Research similar compositions using Google Images and supported web search. Reco
 
 Before every generation/edit, read the owner equipment catalogue and README. Identify actual task, surface, role and purpose. Run the project's equipment checker with service/task/purpose/equipment IDs or `none` and reason. Inspect selected original reference images and isolated derivatives, then attach appropriate references to the built-in image tool. Text-only matching is insufficient. Preserve physical hardware geometry and colours; originals override derivatives. An air mover is not a dehumidifier. Do not infer brands, pressure, chemicals, steam capability or unseen parts. No decorative ribbons or graphic airflow. Use `none` when no machine belongs, especially finished AFTER scenes.
 
-Record this check using `preflight --output <queue> --slot <id> --equipment <ids-or-none> --reason <task-reason> --evidence <actual-check-path>`. This command records operator evidence, it does not inspect equipment or certify the check by itself. Then call the built-in image tool with the selected references. Do not send images to an unapproved third-party generator.
+Record this check using `recovery.py preflight --output <queue> --slot <id> --equipment <ids-or-none> --reason <task-reason> --evidence <actual-check-path>`. This command records operator evidence, it does not inspect equipment or certify the check by itself. Then call the built-in image tool with the selected references. Do not send images to an unapproved third-party generator.
 
 ## Review and persist
 
-Register each generated output with `register --output <queue> --slot <id> --asset <path> --provenance AI_ILLUSTRATIVE`. Use `OWNER_SUPPLIED` only for actual owner-provided assets, not to bypass the generation reference gate. Asset versions stay in their page folder. Keep hashes, provenance and original references. Generated/materially edited imagery is illustrative; `job_verified=false` until authentic evidence establishes an actual job.
+Register each generated output with `recovery.py register --output <queue> --slot <id> --asset <path> --provenance AI_ILLUSTRATIVE`. Use `OWNER_SUPPLIED` only for actual owner-provided assets, not to bypass the generation reference gate. Asset versions stay in their page folder. Keep hashes, provenance and original references. Generated/materially edited imagery is illustrative; `job_verified=false` until authentic evidence establishes an actual job.
 
 Review: task and target visible, service appropriate, realistic anatomy/materials/lighting, correct equipment, varied page scene, readable crop, connected before/after identity, and clear result. The generated tool's success is not visual approval. Technical checks, visual QA and exact owner approval are separate evidence layers. Give a short customer-perspective assessment: can the intended customer identify the service and feel credible workmanship? Do not invent conversion predictions or perfect scores.
 
 For comparison QA, use one contact sheet showing all six images in the page's three pairs when visual analysis is authorized. Camera angle can vary if the same environment/object is clear. Revise only the side needed; preserve any approved side. A BEFORE person is mandatory for the explicitly annotated rug comparisons, not a universal rule across every service. AFTER shows the finished result without forced machinery.
 
-Write the eight checks in a JSON object with the exact keys from the CLI's `REVIEW_CHECKS`; record non-applicable reasons in review evidence rather than pretending they were visually tested. Run `review --checks <json-file> --evidence <actual-screenshot-review-reference>`. The CLI validates evidence presence and hashes, not the truth of a human/agent attestation. Stop after three repeated attempts, change method with the owner, and keep a precise resume record. Do not repeatedly scan all files or rerun passing tests without cause.
+Write the eight checks in a JSON object with the exact keys from the CLI's `REVIEW_CHECKS`; record non-applicable reasons in review evidence rather than pretending they were visually tested. Run `recovery.py review --output <queue> --slot <id> --observations <json-file> --evidence <actual-saved-review-file>`. The CLI validates evidence presence and hashes, not the truth of a human/agent attestation. Stop after three repeated attempts, change method with the owner, and keep a precise resume record. Do not repeatedly scan all files or rerun passing tests without cause.
 
-Only run `approve --evidence <direct-owner-message-for-exact-revision>` after actual owner approval. General workflow/design approval does not approve images. Locked assets cannot be registered over. Never infer approval from silence or elapsed time.
+Only run `recovery.py approve --output <queue> --slot <id> --evidence <saved-direct-owner-message-identifying-exact-hash>` after actual owner approval. General workflow/design approval does not approve images. Locked assets cannot be registered over. Never infer approval from silence or elapsed time.
 
 ## Handover and optional integration
 

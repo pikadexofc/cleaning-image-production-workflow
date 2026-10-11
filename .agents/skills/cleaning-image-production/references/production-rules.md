@@ -27,3 +27,6 @@ Official references, reverify when used:
 - https://developers.google.com/search/docs/appearance/google-images
 
 Google image SEO guidance supports clear descriptive filenames and useful alt text. Describe the actual subject, retain correct extensions and avoid keyword stuffing. Never modify live SEO without the owner's scope permitting it.
+
+
+Latest role-specific override: NO humans in hero images, including partial bodies, shadows and reflections. Active cleaning outside heroes keeps the cropped-head worker; plain dark forest-green polo and practical dark trousers. Natural flagship-smartphone documentary finish, neutral-warm balance and restrained contrast. No CGI gloss, HDR excess, stock posing, artificial blur, text, watermarks or invented logos. See recovery-authority.md for evidence/test mapping.
